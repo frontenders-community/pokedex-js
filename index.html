@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <!-- Milligram CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="loadData()">
+    <div id="root">
+        <div class="poke__app container">
+            <div>
+                <h1>Cerca un pokemon</h1>      
+                <input id="searchInput" type="search" placeholder="e.g. bulbasaur" />
+                <button id="searchBtn" class="button">Cerca</button>
+            </div>
+            <div class='poke__container'>
+                <h2 id="resultText">Ecco i tuoi risultati per [...]</h2>
+                <div class="poke__info row">
+                  <div class="column">
+                    <h4 id="pokemonName">Nome: ...</h4>
+                  </div>
+                  <div class="column">
+                    <h4 id="pokemonWeight">Peso: ...</h4>
+                  </div>
+                  <div class="column">
+                    <h4 id="pokemonHeight">Altezza: ...</h4>
+                  </div>
+                </div>
+                <hr />
+                <div class="row">
+                  <div class="poke__image column">
+                    <img id="pokemonImage" src="" />
+                    <div class="poke__image__buttons">
+                      <button id="defaultImageBtn" class="button button-outline">Default</button>
+                      <button id="shinyImageBtn" class="button button-outline">Shiny</button>
+                    </div>
+                  </div>
+                  <div class="poke__stats column">
+                    <h3>Statistiche</h3>
+                    <div id="pokemonStats"></div>
+                  </div>
+                </div>
+                <button id="addToPokedexBtn" class="add-btn">Aggiungilo al pokedex</button>
+            </div>
+            <div class="pokedex">
+                <h2>Il tuo Pokedex</h2>
+                <div id="pokedex" class="pokedex__items"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
